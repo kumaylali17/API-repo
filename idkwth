@@ -1,2 +1,6 @@
 <?php
-// Your PHP code here
+class MyClass{
+    public function heading(){
+        echo "Hello World";
+    }
+}
