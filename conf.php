@@ -10,3 +10,6 @@ $conf['language'] = "en";
 //Database constansts
 $conf['db_type'] = "mysql";
 $conf['db_host'] = "localhost";
+$conf['db_user'] = "root";
+$conf['db_pass'] = "Kvmurji7";
+$conf['db_name'] = "";

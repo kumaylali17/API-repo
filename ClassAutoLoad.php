@@ -1,14 +1,15 @@
 <?php
+require_once 'conf.php';
 $directory = [
-    'layouts',
+    'Layouts',
     'Forms'
 ];
 
 spl_autoload_register(function ($class_name) use ($directory) {
     foreach ($directory as $dir) {
-        $file = __DIR__ . '/' . $dir . '/' . $class_name . '.php';
-        if (file_exists($file)) {
-            require_once $file;
+        $filePath = __DIR__ . '/' . $dir . '/' . $class_name . '.php';
+        if (file_exists($filePath)) {
+            require_once $filePath;
             return;
         }
     }
@@ -16,3 +17,4 @@ spl_autoload_register(function ($class_name) use ($directory) {
 
 //create varois instances to test autoloading
 $layoutsInstance = new layouts();
+$formsInstance = new forms();
